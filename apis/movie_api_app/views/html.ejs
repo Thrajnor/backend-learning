@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<h2>Welcome in home page</h2>
+
+<form action="/" method="GET">
+    <label for="title">What movie you are looking for ? :</label>
+    <input type="text" placeholder="Search term" name="search">
+    <input type="submit">
+</form>
+<ol>
+    <% data.Search.forEach(function(movie) { %>
+        <li> <%= movie.Title %> </li>
+    <% }) %>
+</ol>
+<% include partials/footer %>
