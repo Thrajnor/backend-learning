@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class='ui center aligned grid container'>
+    <div class='body center floated left aligned ten wide column'>
+        <form class="ui form" action='/blogs/<%=blog._id%>?_method=PUT' method='POST'>
+          <div class='ui raised segment new'>
+            <span class='ui header large'>Edit Post: <strong><%=blog.title%></strong></span>
+            <div class="field">
+              <label>Title</label>
+              <input type="text" name="blog[title]" placeholder="Blog title" value='<%=blog.title%>'>
+            </div>
+            <div class="field">
+              <label>Image URL</label>
+              <input type="text" name="blog[image]" placeholder="Image URL" value='<%=blog.image%>'>
+            </div>
+            <div class="field">
+              <label>Short Text</label>
+              <textarea rows="3" name="blog[body]" placeholder='Write your story here'><%=blog.body%></textarea>
+            </div>
+          </div>
+          <button class="ui bottom raised attached button primary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>

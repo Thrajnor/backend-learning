@@ -1,0 +1,26 @@
+<% include partials/header %>
+    <% date = moment(blog.date).format("HH:MM - Do MMM, 'YY")%>
+      <div class="ui main text container body">
+        <div class="ui raised segment new">
+          <div class='ui huge header'><%=blog.title%></div>
+          <div class='ui top attached'>
+            <div class="item">
+              <img class='ui centered rounded image' src='<%=blog.image%>'>
+              <div class='content'>
+                <span class=""><%=date%></span>
+              </div>
+              <div class='description'>
+                <p class=''><%-blog.body%></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="ui bottom raised attached button primary" href='/blogs/<%=blog._id%>/edit'>Edit Post</a>
+        <form action="/blogs/<%=blog._id%>?_method=DELETE" method='POST'>
+          <button class="ui bottom raised attached button red" type='submint'>Delete post</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+<% include partials/footer %>

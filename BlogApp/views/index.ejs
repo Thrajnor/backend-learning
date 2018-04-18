@@ -1,0 +1,17 @@
+<% include partials/header %>
+<div class='ui container body'>
+    
+  <% for (var i = 0; i < blogs.length; i++) {%>
+    <% date = moment(blogs[i].date).format("HH:MM - Do MMM, 'YY")%>
+    <div class='ui center aligned grid'>
+      <div class="ui eight wide column container raised segment row" id='blog'>
+        <span class="sixteen wide column right aligned"><%=date%></span>
+        <span class='sixteen wide column left aligned'><img class='ui tiny avatar image' src='<%=blogs[i].image%>'> <%=blogs[i].title%></p></span>
+        <p class='sixteen wide column center aligned'><%-blogs[i].body.substring(0, 100)%><a href='/blogs/<%=blogs[i]._id%>'>...</a></p>
+        <a href='/blogs/<%=blogs[i]._id%>' class="ui positive button" id='blogButton'>See More info</a>
+      </div>
+    </div>
+  <% } %>
+  
+</div>
+<% include partials/footer %>

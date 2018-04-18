@@ -1,0 +1,48 @@
+body {
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color:black;
+}
+a:hover {
+  text-decoration: none;
+  color:black;
+}
+.icon {
+  font-size: 2em;
+}
+.body {
+  margin-top: 80px;
+}
+.body.ui {
+  margin-top: 100px;
+}
+div.ui.raised.segment.new {
+  margin-bottom: 0px;
+  border: none;
+}
+#blog  {
+  padding: 1em 0;
+  margin-bottom: 2em;
+}
+.ui.bottom.attached.button {
+  margin-left: 3%;
+  box-shadow: 0px 2px 12px 0px rgba(34, 36, 38, 0.30),
+              0px 2px 14px 0px rgba(34, 36, 38, 0.20) !important;
+  min-width: 15%;
+  float: left;
+}
+.ui.bottom.attached.button.red {
+  float: right;
+  margin-right: 3%;
+}
+#blogButton {
+  margin-top: 10px;
+}
